@@ -32,4 +32,6 @@ Requires a file or `ModuleScript`.
 
 Falls back on roblox's require if it cannot find a module in the workspace.
 
+⚠ WARNING: This function is VERY verbose, always call with `pcall` if you are unsure.
+
 `require(module: string | ModuleScript | number): any`
