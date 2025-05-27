@@ -64,10 +64,8 @@ function execRequire.require(file: string | any): any
 			error("Failed to load module '" .. file .. "' (" .. err .. ")", 2)
 		end
 
-		-- Call the loaded module to get its return value
 		local returns = loadedModule()
 
-		-- Cache the result for future requires
 		moduleCache[file] = returns
 
 		return returns
