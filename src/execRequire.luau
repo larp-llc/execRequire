@@ -58,10 +58,6 @@ function execRequire.require(file: string | any): any
 	else
 		local filepath = file
 
-		print("file paths nigger")
-		print("exists: " .. tostring(isModule(file)), "file: " .. file)
-		print("exists: " .. tostring(isModule(file .. ".init")), "file: " .. file .. ".init")
-
 		local isAModule = isModule(file) or isModule(file .. ".init")
 		if not isAModule then
 			error("Attempt to require a non-module file: '" .. file .. "'", 2)
