@@ -50,3 +50,30 @@ require("directory.testfile")
 -- Assuming directory has a file called init.luau or init.lua this should require
 require("directory")
 ```
+
+### Requiring a ModuleScript
+
+*Note: this is assuming the ModuleScript exists ofc*
+
+ModuleScript:
+```lua
+local Module = {}
+
+Module.testField = 5
+
+function Module.testFunction(a: number): number
+	return a + 5
+end
+
+return Module
+```
+
+
+code:
+```lua
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local testModule = require(ReplicatedStorage:FindFirstChild("TestModuleScript"))
+
+print(testModule.testField) --> 5
+print(testModule.testFunction(10)) --> 15
+```
