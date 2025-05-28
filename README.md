@@ -34,3 +34,19 @@ Falls back on roblox's require if it cannot find a module in the workspace.
 ⚠ WARNING: This function is VERY verbose, always call with `pcall` if you are unsure.
 
 ❕ NOTE: Any files required with this function will have their thread identity reset. Its a good idea to call `setthreadidentity` on the top of your file before requiring it. As far as i know this is undocumented behavior.
+
+## Examples
+
+### Requiring a file
+
+```lua
+require("testfile")
+require("directory.testfile")
+```
+
+### Requiring a directory
+
+```lua
+-- Assuming directory has a file called init.luau or init.lua this should require
+require("directory")
+```
