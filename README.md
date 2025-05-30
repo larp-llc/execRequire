@@ -1,5 +1,9 @@
 # *execRequire*
 
+An easy way to require files in the workspace.
+
+EXECUTOR MUST SUPPORT: `isfile` `dofile` `loadfile` `getrenv`
+
 Put this in your workspace and run it with:
 
 ```lua

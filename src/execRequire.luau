@@ -43,7 +43,7 @@ local function loadModule(filepath: string)
 	end
 end
 
-local robloxRequire = require
+local robloxRequire = getrenv().require
 
 function execRequire.require(file: string | any): any
 	-- maintain compatibility with robloxs require
